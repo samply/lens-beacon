@@ -36,7 +36,7 @@ services:
 
   lens:
     # NOTE: This will only host the default image. You will need to create your own image at docker hub using the provided Dockerfile.
-    image: samply/lens-demo
+    image: samply/lens-beacon
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.lens.rule=Host(`${GUI_HOST}`)"

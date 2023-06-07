@@ -1,5 +1,5 @@
 {
-  "name": "lens-demo",
+  "name": "lens-beacon",
   "version": "0.0.1",
   "license": "SEE LICENSE IN LICENSE.md",
   "scripts": {
@@ -13,11 +13,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:headless": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
-    "analyze": "ng build --configuration production --stats-json && webpack-bundle-analyzer ./dist/lens-demo/stats.json",
+    "analyze": "ng build --configuration production --stats-json && webpack-bundle-analyzer ./dist/lens-beacon/stats.json",
     "lint": "ng lint --fix",
     "lint:check": "ng lint",
-    "lint:check-commits": "commitlint --from=origin/develop",
-    "prepare": "husky install"
+    "lint:check-commits": "commitlint --from=origin/develop"
   },
   "dependencies": {
     "@angular/animations": "^15.1.0",
@@ -56,7 +55,6 @@
     "@typescript-eslint/eslint-plugin": "5.48.2",
     "@typescript-eslint/parser": "5.48.2",
     "eslint": "^8.33.0",
-    "husky": "^8.0.3",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",

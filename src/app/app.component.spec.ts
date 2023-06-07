@@ -57,9 +57,9 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Samply.Lens Demo'`, () => {
+  it(`should have as title 'Samply.Lens Beacon'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title.getTitle()).toEqual('Samply.Lens Demo');
+    expect(app.title.getTitle()).toEqual('Samply.Lens Beacon');
   });
 });

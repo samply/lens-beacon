@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Usage:
-# Download with: curl -fsSL https://github.com/samply/lens-demo/-/raw/main/install-lens.sh -o install-lens.sh
+# Download with: curl -fsSL https://github.com/samply/lens-beacon/-/raw/main/install-lens.sh -o install-lens.sh
 # Run the Script: sudo sh ./install-lens.sh
 
 read_random () {

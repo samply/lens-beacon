@@ -1,12 +1,10 @@
-# Samply.Lens Demo Application
+# Samply.Lens Beacon Application
 
-This project holds a demo application for the [samply.lens](https://github.com/samply/lens) project. It's intended usage is to provide an example for developers on how to use samply.lens in their application.
-To create your own application with Samply.Lens, you can copy the contents of this repository through the [template repository functionality](https://docs.github.com/de/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template) in github.
+This project holds a Beacon application for the [samply.lens](https://github.com/samply/lens) project. It's intended usage is to provide an example for developers on how to use samply.lens in their application.
 
 ## Content of this project
 ### Development Environment
-The [docker-compose.dev.yml](./docker-compose.dev.yml) will provide you with a blaze instance to which the demo application will automatically connect.
-So getting started with the demo is as easy as installing all dependencies
+So getting started with the Beacon is as easy as installing all dependencies
 ``` shell
 npm install
 ```
@@ -16,20 +14,10 @@ then starting the dev environment
 docker-compose -f ./docker-compose.dev.yml up -d 
 ```
 
-and finally running the demo application
+and finally running the Beacon application
 ``` shell
 npm run start
 ```
-
-### Some Files you should see as usage reference
-- [app.module.ts](./src/app/app.module.ts)
-  In this file you can define the translator to use and more.
-- [main.component.ts](./src/app/main/main.component.ts)
-  In this file you can adjust the displayed diagrams
-- [environment.ts](./src/environments/environment.ts)
-  Defines the target services for builds in development
-- [environment.prod.ts](./src/environments/environment.prod.ts)
-  Defines the target services for the production version of lens (used in Docker Image)
 
 ### Dockerfile
 The [Dockerfile](./Dockerfile) in this project will build an docker image based on nginx containing the application. The [Release Workflow](./.github/workflows/release.yml) then utilizes the [default samply workflow for building docker images](https://github.com/samply/github-workflows/blob/main/.github/workflows/docker-ci.yml)

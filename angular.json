@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lens-demo": {
+    "lens-beacon": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lens-demo",
+            "outputPath": "dist/lens-beacon",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -37,8 +37,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "3mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "lens-demo:build:production"
+              "browserTarget": "lens-beacon:build:production"
             },
             "development": {
-              "browserTarget": "lens-demo:build:development"
+              "browserTarget": "lens-beacon:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lens-demo:build"
+            "browserTarget": "lens-beacon:build"
           }
         },
         "test": {
