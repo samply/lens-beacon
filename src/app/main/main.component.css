@@ -1,0 +1,25 @@
+:host {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-gap: .6rem;
+  overflow: hidden;
+}
+
+div {
+  display: flex;
+  gap: .6rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+div > lens-criteria-catalogue {
+  flex: 1 1 25%;
+  overflow: auto;
+}
+
+div > div {
+  flex: 1 1 75%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: auto;
+}

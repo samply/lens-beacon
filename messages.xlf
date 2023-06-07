@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="date-condition-builder.from" datatype="html">
+        <source>from:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">components/criteria-catalogue/src/date-condition-builder/date-condition-builder.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="date-condition-builder.to" datatype="html">
+        <source>to:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">components/criteria-catalogue/src/date-condition-builder/date-condition-builder.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="number-condition-builder.equals" datatype="html">
+        <source>equals:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">components/criteria-catalogue/src/number-condition-builder/number-condition-builder.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="number-condition-builder.from" datatype="html">
+        <source>from:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">components/criteria-catalogue/src/number-condition-builder/number-condition-builder.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="number-condition-builder.to" datatype="html">
+        <source>to:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">components/criteria-catalogue/src/number-condition-builder/number-condition-builder.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2455725920612353578" datatype="html">
+        <source>Ask <x id="INTERPOLATION" equiv-text="aryButtonColors"/> sites to negotiate</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">components/negotiate-button/src/negotiate-button.component.html</context>
+          <context context-type="linenumber">2,7</context>
+        </context-group>
+        <note priority="1" from="description">indication for the user that clicking this button will start negotiation with multiple sites</note>
+      </trans-unit>
+      <trans-unit id="8969037609074820934" datatype="html">
+        <source>Search has been modified!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">components/negotiate-button/src/negotiate-button.component.html</context>
+          <context context-type="linenumber">3,6</context>
+        </context-group>
+        <note priority="1" from="description">warn the user that search parameters are modified</note>
+      </trans-unit>
+      <trans-unit id="4203652128950847512" datatype="html">
+        <source>Sites</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">components/result-table/src/result-table.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">column header for the name of a site</note>
+      </trans-unit>
+      <trans-unit id="2904579647410573959" datatype="html">
+        <source>Patients</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">components/result-table/src/result-table.component.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+        <note priority="1" from="description">column header for the number of patients</note>
+      </trans-unit>
+      <trans-unit id="1159573015632588468" datatype="html">
+        <source>Specimen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">components/result-table/src/result-table.component.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+        <note priority="1" from="description">column header for the number of specimen</note>
+      </trans-unit>
+      <trans-unit id="135450262813974755" datatype="html">
+        <source>[type your search criteria here]</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">components/search-bar/src/search-bar.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">placeholder for users search request</note>
+      </trans-unit>
+      <trans-unit id="4580988005648117665" datatype="html">
+        <source>Search</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">components/search-bar/src/search-bar.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">text for the search button</note>
+      </trans-unit>
+      <trans-unit id="8700121026680200191" datatype="html">
+        <source>Clear</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">components/search-bar/src/search-bar.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">text for the clear button</note>
+      </trans-unit>
+      <trans-unit id="6233358794697333609" datatype="html">
+        <source> Click here to view your detailed query. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">components/search-bar/src/search-bar.component.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+        <note priority="1" from="description">hint the user that clicking this button will show the detailed query</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
