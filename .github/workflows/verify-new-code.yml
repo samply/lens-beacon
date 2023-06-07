@@ -1,0 +1,41 @@
+name: "Verify new Code"
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+  push:
+    branches:
+      - develop
+
+jobs:
+  verify-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+      - run: npm ci
+      - name: "Check Code Format"
+        run: npm run format:check
+      - name: "Check Security"
+        run: npm run security:check
+      - name: "Verify Commit Messages"
+        run: npm run lint:check-commits
+      - run: npm run lint:check
+
+  test:
+    needs: [verify-code]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run test:headless

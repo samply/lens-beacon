@@ -1,0 +1,21 @@
+name: "Verify new Releases"
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verify-new-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - run: git checkout --track origin/main
+      - run: git checkout --track origin/develop
+      - name: "Ensure Package Version changed"
+        run: |
+            if [ "$(git diff main develop -- package.json | grep version | wc -l)" -eq 0 ]; then \
+              echo "::error:: Please update the version of package.json according to the semantic versioning guidelines!"; \
+              exit 1; \
+            fi
