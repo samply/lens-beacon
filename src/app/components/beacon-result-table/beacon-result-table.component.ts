@@ -9,10 +9,10 @@ import {
 * */
 @Component({
   selector: 'lens-result-table',
-  templateUrl: './result-table.component.html',
-  styleUrls: ['./result-table.component.css'],
+  templateUrl: './beacon-result-table.component.html',
+  styleUrls: ['./beacon-result-table.component.css'],
 })
-export class ResultTableComponent extends ResultRendererComponent {
+export class BeaconResultTableComponent extends ResultRendererComponent {
   public tableData: Array<{site: string, patients: number, samples: number, diagnosis: number}> = [];
 
   public selectedSites: Array<{site: string, patients: number, samples: number, diagnosis: number}> = [];

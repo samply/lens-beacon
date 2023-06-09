@@ -7,7 +7,7 @@ import {
 } from '@samply/lens-components/chart-js';
 import { ResultSummaryBarComponent } from '@samply/lens-components/result-summary-bar';
 //import { ResultTableComponent } from '@samply/lens-components/result-table';
-import { ResultTableComponent } from '../components/result-table/result-table.component';
+import { BeaconResultTableComponent } from '../components/beacon-result-table/beacon-result-table.component';
 
 const DIAGNOSIS_REGEX = /C|D0|D4|D37|D38|D39/gm;
 
@@ -60,7 +60,7 @@ export class MainComponent {
     new ResultRenderer(
       '',
       [{ key: 'patients', subset: 'sites' }],
-      ResultTableComponent,
+      BeaconResultTableComponent,
       {
         headers: this.siteHeaders,
         clickDisabled: true,

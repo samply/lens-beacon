@@ -12,7 +12,7 @@ import { staticCatalogue } from 'src/assets/catalogue';
 import { ImageModule } from 'primeng/image';
 import {TableModule} from "primeng/table";
 import {CardModule} from "primeng/card";
-import {ResultTableComponent} from "./components/result-table/result-table.component";
+import {BeaconResultTableComponent} from "./components/beacon-result-table/beacon-result-table.component";
 import { NegotiateButtonModule } from '@samply/lens-components/negotiate-button';
 
 import {
@@ -40,7 +40,7 @@ import { ChartJsModule } from '@samply/lens-components/chart-js';
 const routes: Routes = [{ path: '', component: MainComponent }];
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, ResultTableComponent],
+  declarations: [AppComponent, MainComponent, BeaconResultTableComponent],
   imports: [
     BrowserModule,
     SearchBarModule,

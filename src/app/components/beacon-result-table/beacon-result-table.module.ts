@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ResultTableComponent } from "./result-table.component";
+import { BeaconResultTableComponent } from "./beacon-result-table.component";
 import { TableModule } from "primeng/table";
 import { CardModule } from "primeng/card";
 import { NegotiateButtonModule } from '@samply/lens-components/negotiate-button';
@@ -9,7 +9,7 @@ import { NegotiateButtonModule } from '@samply/lens-components/negotiate-button'
 
 @NgModule({
   declarations: [
-    ResultTableComponent
+    BeaconResultTableComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +18,7 @@ import { NegotiateButtonModule } from '@samply/lens-components/negotiate-button'
     NegotiateButtonModule
   ],
   exports: [
-    ResultTableComponent
+    BeaconResultTableComponent
   ]
 })
-export class ResultTableModule {}
+export class BeaconResultTableModule {}

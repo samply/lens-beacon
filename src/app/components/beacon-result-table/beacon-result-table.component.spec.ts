@@ -4,13 +4,13 @@ import { CATALOGUE_FETCHER_TOKEN, Category, ChipTransformPipe, LensConfig, LENS_
 import { CardModule } from 'primeng/card';
 import { TableModule } from 'primeng/table';
 
-import { ResultTableComponent } from './result-table.component';
+import { BeaconResultTableComponent } from './beacon-result-table.component';
 
 const STATIC_CATALOGUE: Array<Category> = [];
 
 describe('ResultTableComponent', () => {
-  let component: ResultTableComponent;
-  let fixture: ComponentFixture<ResultTableComponent>;
+  let component: BeaconResultTableComponent;
+  let fixture: ComponentFixture<BeaconResultTableComponent>;
 
   beforeEach(async () => {
     let queryTranslatorSpy = jasmine.createSpyObj(['transform']);
@@ -21,7 +21,7 @@ describe('ResultTableComponent', () => {
         CardModule,
         TableModule
       ],
-      declarations: [ResultTableComponent],
+      declarations: [BeaconResultTableComponent],
       providers: [
         {
           provide: QUERY_TRANSLATOR_TOKEN,
@@ -46,14 +46,14 @@ describe('ResultTableComponent', () => {
           useValue: new ResultRenderer(
             "Some Chart",
             [{ key: "Identifier" }],
-            ResultTableComponent
+            BeaconResultTableComponent
           )
         }
       ]
     })
       .compileComponents();
 
-    fixture = TestBed.createComponent(ResultTableComponent);
+    fixture = TestBed.createComponent(BeaconResultTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
