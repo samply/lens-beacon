@@ -3,11 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 import {
-  diagnosisMeasure,
   LensConfig,
-  medicationStatementsMeasure,
   patientsMeasure,
-  proceduresMeasure,
   specimenMeasure,
 } from '@samply/lens-core';
 import { Blaze } from '@samply/lens-core/cql';
@@ -18,10 +15,7 @@ export const environment = {
     [new Blaze('blaze', new URL('http://localhost:8080'))],
     [
       patientsMeasure,
-      diagnosisMeasure,
-      specimenMeasure,
-      proceduresMeasure,
-      medicationStatementsMeasure,
+      specimenMeasure
     ]
   ),
 };
