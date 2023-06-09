@@ -145,12 +145,6 @@ export class MainComponent {
 
   public diagrams: ResultRenderer[] = [
     new ResultRenderer(
-      'Patienten pro Standort',
-      [{ key: 'sites', subset: '*' }],
-      PieChartComponent,
-      { headers: this.siteHeaders, clickDisabled: true }
-    ),
-    new ResultRenderer(
       '',
       [{ key: 'patients', subset: 'sites' }],
       ResultTableComponent,
@@ -165,56 +159,6 @@ export class MainComponent {
       [{ key: 'patients', subset: 'Gender' }],
       PieChartComponent,
       { headers: this.genderHeaders }
-    ),
-    new ResultRenderer(
-      'Diagnosen',
-      [{ key: 'diagnosis', subset: 'diagnosis' }],
-      BarChartComponent,
-      {
-        indexAxis: 'y',
-        aggregators: this.diagnosisAggregators,
-        displayProperties: ['high-diagram'],
-        xAxisTitle: 'Anzahl der Diagnosen',
-        yAxisTitle: 'ICD-10-Codes',
-      }
-    ),
-    new ResultRenderer(
-      'Alter bei Erstdiagnose',
-      [{ key: 'patients', subset: 'Age' }],
-      BarChartComponent,
-      {
-        headers: this.ageHeaders,
-        sorters: this.ageSorters,
-        clickDisabled: true,
-        displayProperties: ['wide-diagram'],
-        xAxisTitle: 'Alter',
-        yAxisTitle: 'Anzahl der Primärdiagnosen',
-      }
-    ),
-    new ResultRenderer(
-      'Vitalstatus*',
-      [{ key: 'patients', subset: '75186-7' }],
-      PieChartComponent,
-      { hints: this.vitalStateHints }
-    ),
-    new ResultRenderer(
-      'Therapieart',
-      [
-        { key: 'procedures', subset: 'ProcedureType' },
-        { key: 'medicationStatements' },
-      ],
-      BarChartComponent,
-      {
-        headers: this.therapyHeaders,
-        clickDisabled: true,
-        yAxisTitle: 'Anzahl der Therapien',
-      }
-    ),
-    new ResultRenderer(
-      'Systemische Therapien',
-      [{ key: 'medicationStatements', subset: 'MedicationType' }],
-      BarChartComponent,
-      { clickDisabled: true, yAxisTitle: 'Anzahl der Therapien' }
     ),
     new ResultRenderer(
       'Proben',
