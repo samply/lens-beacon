@@ -7,15 +7,17 @@ import {
   patientsMeasure,
   specimenMeasure,
 } from '@samply/lens-core';
-import { Blaze } from '@samply/lens-core/cql';
+import {geneticsMeasure} from '../app/model/lens-config';
+import {Beacon} from '../app/services/beacon';
 
 export const environment = {
   production: false,
   lensConfig: new LensConfig(
-    [new Blaze('blaze', new URL('http://localhost:8080'))],
+    [new Beacon('beacon', new URL('http://localhost:8080'))],
     [
       patientsMeasure,
-      specimenMeasure
+      specimenMeasure,
+      geneticsMeasure // Measure report for variants and other genetic information
     ]
   ),
 };
