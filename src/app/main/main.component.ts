@@ -32,105 +32,17 @@ export class MainComponent {
     .set('wuerzburg', 'Würzburg')
     .set('dktk-test', 'DKTK-Test');
 
-  private ageHeaders: Map<string, string> = new Map<string, string>()
-    .set('0', '0-9')
-    .set('10', '10-19')
-    .set('20', '20-29')
-    .set('30', '30-39')
-    .set('40', '40-49')
-    .set('50', '50-59')
-    .set('60', '60-69')
-    .set('70', '70-79')
-    .set('80', '80-89')
-    .set('90', '90-99')
-    .set('100', '100-109')
-    .set('110', '110-119');
-
-  private ageSorters: Array<
-    (
-      a: { key: string; population: number },
-      b: { key: string; population: number }
-    ) => number
-  > = [
-    (a, b) => {
-      return parseInt(a.key) - parseInt(b.key);
-    },
-  ];
-
   private genderHeaders: Map<string, string> = new Map<string, string>()
     .set('male', 'männlich')
     .set('female', 'weiblich')
     .set('other', 'sonstiges / intersexuell')
     .set('unknown', 'unbekannt');
 
-  private vitalStateHeaders: Map<string, string> = new Map<string, string>()
-    .set('lebend', 'alive')
-    .set('verstorben', 'deceased')
-    .set('unbekannt', 'unknown');
-
-  private vitalStateHints: string[] = [
-    '"verstorben" bedeutet, dass ein Todesdatum dokumentiert wurde. Die anderen Werte dieser Übersicht wurden noch nicht harmonisiert.',
-  ];
-
-  private therapyHeaders: Map<string, string> = new Map<string, string>()
-    .set('OP', 'Operationen')
-    .set('ST', 'Strahlentherapien')
-    .set('medicationStatements', 'Systemische Therapien');
-
   private summaryBarHeaders: Map<string, string> = new Map<string, string>()
     .set('sites', 'Standorte')
     .set('patients', 'Patienten')
     .set('specimen', 'Proben')
     .set('diagnosis', 'Diagnosen');
-
-  private diagnosisAggregators: Array<
-    (
-      values: Array<{ key: string; population: number }>
-    ) => Array<{ key: string; population: number }>
-  > = [
-    // Filter the Input
-    (values) => {
-      return values.filter((value) => DIAGNOSIS_REGEX.test(value.key));
-    },
-    // Sort alphabetically
-    (values) => {
-      return values.sort((a, b) => a.key.localeCompare(b.key));
-    },
-    (values) => {
-      if (values.every((value) => value.key.indexOf(values[0].key) !== -1)) {
-        return values;
-      } else {
-        // 1) Reduce the key to the necessary part (for later aggregation leave the .)
-        const adjustedIcdCodes = values.map((value) => {
-          return {
-            key: value.key.substring(0, 4),
-            population: value.population,
-          };
-        });
-        // 2) Aggregate the populations
-        let aggregatedResults: Array<{ key: string; population: number }> = [];
-        adjustedIcdCodes.forEach((value) => {
-          const index = aggregatedResults.findIndex(
-            (icdCode) => icdCode.key === value.key
-          );
-          if (index != -1) {
-            aggregatedResults[index].population += value.population;
-          } else {
-            aggregatedResults = [...aggregatedResults, value];
-          }
-        });
-        // 3) Add % for wildcards on codes with .
-        const result = aggregatedResults.map((value) => {
-          if (value.key.indexOf('.') !== -1) {
-            return { key: value.key + '%', population: value.population };
-          } else {
-            return value;
-          }
-        });
-        return result;
-      }
-    },
-  ];
 
   public summaryBar = new ResultRenderer(
     'Ergebnisse',
