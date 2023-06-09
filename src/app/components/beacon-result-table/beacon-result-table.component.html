@@ -14,6 +14,7 @@
               <th i18n="column header for the name of a site">Sites</th>
               <th i18n="column header for the number of patients">Patients</th>
               <th i18n="column header for the number of specimen">Specimen</th>
+              <th i18n="column header for the number of variants">Variants</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-result>
@@ -23,8 +24,12 @@
               </td>
               <td *ngIf="resultRenderer.headers.size == 0">{{result.site}}</td>
               <td *ngIf="resultRenderer.headers.size > 0">{{(resultRenderer.headers.has(result.site)) ? resultRenderer.headers.get(result.site) : result.site}}</td>
-              <td>{{result.patients}}</td>
-              <td>{{result.samples}}</td>
+              <td *ngIf="result.patients < 0">-</td>
+              <td *ngIf="result.patients >= 0">{{result.patients}}</td>
+              <td *ngIf="result.samples < 0">-</td>
+              <td *ngIf="result.samples >= 0">{{result.samples}}</td>
+              <td *ngIf="result.genetics < 0">-</td>
+              <td *ngIf="result.genetics >= 0">{{result.genetics}}</td>
             </tr>
         </ng-template>
     </p-table>

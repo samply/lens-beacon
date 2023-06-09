@@ -27,10 +27,12 @@ export class BeaconResultTableComponent extends ResultRendererComponent {
         .map(site => {
           let patientStratum = site.stratum.find(strat => strat.key == "patients")
           let specimenStratum = site.stratum.find(strat => strat.key == "specimen")
+          let geneticsStratum = site.stratum.find(strat => strat.key == "genetics")
           return {
             site: site.key,
             patients: (patientStratum != undefined) ? patientStratum.population : 0,
             samples: (specimenStratum != undefined) ? specimenStratum.population : 0,
+            genetics: (geneticsStratum != undefined) ? geneticsStratum.population : 0,
             diagnosis: 0,
           }
         }).sort((a, b) => {
