@@ -1,0 +1,24 @@
+<p-card header="{{resultRenderer.title}}">
+    <p-table [value]="tableData" responsiveLayout="scroll" [paginator]="true" [rows]="5">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Site</th>
+                <th>Patients</th>
+                <th>Samples</th>
+                <th>Variants</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-result>
+            <tr>
+                <td *ngIf="resultRenderer.headers.size == 0">{{result.site}}</td>
+                <td *ngIf="resultRenderer.headers.size > 0">{{(resultRenderer.headers.has(result.site)) ? resultRenderer.headers.get(result.site) : result.site}}</td>
+                <td *ngIf="result.patients < 0">-</td>
+                <td *ngIf="result.patients >= 0">{{result.patients}}</td>
+                <td *ngIf="result.samples < 0">-</td>
+                <td *ngIf="result.samples >= 0">{{result.samples}}</td>
+                <td *ngIf="result.genetics < 0">-</td>
+                <td *ngIf="result.genetics >= 0">{{result.genetics}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</p-card>
