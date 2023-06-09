@@ -1,8 +1,4 @@
 import { Category, Criteria } from '@samply/lens-core';
-import { Entities } from './entities';
-import { Diagnosen } from './diagnosen';
-import { Morphologien } from './morphologien';
-import { Lokalisation } from './lokalisation';
 import { MolecularMarker } from './molecular-marker';
 
 export const staticCatalogue: Array<Category> = [
