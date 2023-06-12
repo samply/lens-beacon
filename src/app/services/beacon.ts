@@ -47,6 +47,30 @@ export class Beacon implements RequestTarget {
   // async send(query: string, measures: Object[], treeQuery: Operation): Promise<string> {
   // eslint-disable-next-line @typescript-eslint/ban-types
   async send(query: string, measures: Object[]): Promise<string> {
+    let treeQuery = new Operation;
+
+    this.resultsSubject$.next(new Map<string, any>())
+
+    let treeQueryJsonString = JSON.stringify(treeQuery)
+
+    if (this.auth != "") {
+      this.httpHeaders.append("Authorization", this.auth);
+    }
+
+    const httpOptions = {
+      headers: this.httpHeaders
+    };
+
+    let beaconUrl = this.url.toString()
+
+    let results = await firstValueFrom(this.client.post(beaconUrl + 'query/ast', treeQueryJsonString, httpOptions))
+    let jsonParsedResults = JSON.parse(JSON.stringify(results))
+    for (let i = 0; i < jsonParsedResults.length; i++) {
+      let measureReport = jsonParsedResults[i].measureReport
+      let siteName = jsonParsedResults[i].siteName
+      let siteUrl = jsonParsedResults[i].siteUrl
+      this.resultsSubject$.next(new Map<string, any>([[siteName, measureReport]]))
+    }
     // Return an arbitrary unique ID
     return uuidv4();
   }

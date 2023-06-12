@@ -58,7 +58,7 @@ export class MainComponent {
 
   public diagrams: ResultRenderer[] = [
     new ResultRenderer(
-      '',
+      'Overview',
       [{ key: 'patients', subset: 'sites' }],
       BeaconResultTableComponent,
       {
@@ -68,16 +68,21 @@ export class MainComponent {
       }
     ),
     new ResultRenderer(
-      'Geschlecht',
+      'Gender Distribution',
       [{ key: 'patients', subset: 'Gender' }],
       PieChartComponent,
       { headers: this.genderHeaders }
     ),
     new ResultRenderer(
+      "Ethnicity",
+      [{key: "patients", subset: "Ethnicity"}],
+      BarChartComponent
+    ),
+    new ResultRenderer(
       'Proben',
       [{ key: 'specimen', subset: 'sample_kind' }],
       BarChartComponent,
-      { xAxisTitle: 'Probentypen', yAxisTitle: 'Probenanzahl' }
+      { xAxisTitle: 'Sample types', yAxisTitle: 'Sample count' }
     ),
   ];
 }
