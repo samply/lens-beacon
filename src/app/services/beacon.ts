@@ -42,19 +42,10 @@ export class Beacon implements RequestTarget {
    *
    * @param query Not used.
    * @param measures Not used.
-   * @param treeQuery AST query object.
    */
-  // Commented out the expanded version of this function with the treeQuery argument.
-  // treeQuery would allow this function to send serialized AST to the
-  // lens_beacon_service, but is not available in the develop branch of lens.
-  // async send(query: string, measures: Object[], treeQuery: Operation): Promise<string> {
   // eslint-disable-next-line @typescript-eslint/ban-types
   async send(query: string, measures: Object[]): Promise<string> {
-    let treeQuery = new Operation;
-
     this.resultsSubject$.next(new Map<string, any>())
-
-    let treeQueryJsonString = JSON.stringify(treeQuery)
 
     if (this.auth != "") {
       this.httpHeaders.append("Authorization", this.auth);
@@ -66,7 +57,7 @@ export class Beacon implements RequestTarget {
 
     let beaconUrl = this.url.toString()
 
-    let results = await firstValueFrom(this.client.post(beaconUrl + 'query/ast', treeQueryJsonString, httpOptions))
+    let results = await firstValueFrom(this.client.post(beaconUrl + 'query/ast', query, httpOptions))
     let jsonParsedResults = JSON.parse(JSON.stringify(results))
     for (let i = 0; i < jsonParsedResults.length; i++) {
       let measureReport = jsonParsedResults[i].measureReport

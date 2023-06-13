@@ -26,8 +26,7 @@ import {
 } from '@samply/lens-core';
 
 import {
-  CqlTranslatorService,
-  MeasureTransformerService,
+  MeasureTransformerService
 } from '@samply/lens-core/cql';
 
 import { SearchBarModule } from '@samply/lens-components/search-bar';
@@ -36,6 +35,7 @@ import { ResultSummaryBarModule } from '@samply/lens-components/result-summary-b
 import { ResultRendererGridModule } from '@samply/lens-components/result-renderer-grid';
 import { SingleResultRendererModule } from '@samply/lens-components/single-result-renderer';
 import { ChartJsModule } from '@samply/lens-components/chart-js';
+import {TostringTranslatorService} from "./services/tostring-translator.service";
 
 const routes: Routes = [{ path: '', component: MainComponent }];
 
@@ -60,7 +60,7 @@ const routes: Routes = [{ path: '', component: MainComponent }];
   providers: [
     {
       provide: QUERY_TRANSLATOR_TOKEN,
-      useClass: CqlTranslatorService,
+      useClass: TostringTranslatorService,
     },
     {
       provide: RESULT_TRANSFORMER_TOKEN,
