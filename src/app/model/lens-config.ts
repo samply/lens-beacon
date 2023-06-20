@@ -1,4 +1,6 @@
-/* This defines a measure 'genetics for creating a population of all genetics with additional stratifier Gene-Type */
+/**
+ * This defines a measure 'genetics for creating a population of all genetics with additional stratifier Gene-Type
+ */
 export const geneticsMeasure = {
     key: "genetics",
     measure: {

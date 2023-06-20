@@ -6,10 +6,11 @@ import {
   PieChartComponent,
 } from '@samply/lens-components/chart-js';
 import { ResultSummaryBarComponent } from '@samply/lens-components/result-summary-bar';
-//import { ResultTableComponent } from '@samply/lens-components/result-table';
 import { BeaconResultTableComponent } from '../components/beacon-result-table/beacon-result-table.component';
 
-const DIAGNOSIS_REGEX = /C|D0|D4|D37|D38|D39/gm;
+/**
+ * Defines the components that will be used to build the Beacon search GUI.
+ */
 
 @Component({
   selector: 'app-main',
@@ -79,7 +80,7 @@ export class MainComponent {
       BarChartComponent
     ),
     new ResultRenderer(
-      'Proben',
+      'Samples',
       [{ key: 'specimen', subset: 'sample_kind' }],
       BarChartComponent,
       { xAxisTitle: 'Sample types', yAxisTitle: 'Sample count' }

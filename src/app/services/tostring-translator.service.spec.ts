@@ -3,6 +3,10 @@ import { CATALOGUE_FETCHER_TOKEN, Category, LensConfig, LENS_CONFIG_TOKEN, STATI
 
 import { TostringTranslatorService } from './tostring-translator.service';
 
+/**
+ * Boilerplate code for the tostring-translator.
+ */
+
 const STATIC_CATALOGUE: Array<Category> = [];
 
 describe('TostringTranslatorService', () => {

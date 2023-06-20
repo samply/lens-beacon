@@ -4,9 +4,13 @@ import {
   ResultRendererComponent
 } from '@samply/lens-core';
 
-/*
-* A table specialized on displaying the amount of patients and specimen for each site.
-* */
+/**
+ * A table that displays counts of patients, specimens and variants for each site.
+ * This was designed to work with the results coming back from a Beacon query.
+ * The code was mostly copied-and-pasted from the result-table component in
+ * lens-core, with a few tweaks.
+ */
+
 @Component({
   selector: 'lens-result-table',
   templateUrl: './beacon-result-table.component.html',

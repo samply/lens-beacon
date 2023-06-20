@@ -10,6 +10,10 @@ import {
 import {geneticsMeasure} from '../app/model/lens-config';
 import {Beacon} from '../app/services/beacon';
 
+/**
+ * Specify the request target and measures needed for Beacon queries.
+ */
+
 export const environment = {
   production: false,
   lensConfig: new LensConfig(

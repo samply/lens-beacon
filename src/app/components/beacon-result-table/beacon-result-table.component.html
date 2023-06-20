@@ -24,6 +24,7 @@
               </td>
               <td *ngIf="resultRenderer.headers.size == 0">{{result.site}}</td>
               <td *ngIf="resultRenderer.headers.size > 0">{{(resultRenderer.headers.has(result.site)) ? resultRenderer.headers.get(result.site) : result.site}}</td>
+              <!-- A negative value means "unknown". Display a "-" in this case. -->
               <td *ngIf="result.patients < 0">-</td>
               <td *ngIf="result.patients >= 0">{{result.patients}}</td>
               <td *ngIf="result.samples < 0">-</td>

@@ -37,11 +37,13 @@ export class Beacon implements RequestTarget {
   /**
    * Send the AST query to the Lens-Beacon service (https://github.com/samply/lens_beacon_service).
    *
-   * The service will add one measure report per service, plus the relevant service names
+   * The service will add one measure report per Beacon provider, plus the relevant Beacon provider names
    * (which are used for labelling in the Lens GUI) to this.resultsSubject.
    *
-   * @param query Not used.
+   * @param query String containing serialized AST in JSON format.
    * @param measures Not used.
+   *
+   * Returns a unique ID.
    */
   // eslint-disable-next-line @typescript-eslint/ban-types
   async send(query: string, measures: Object[]): Promise<string> {
