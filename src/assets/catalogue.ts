@@ -1,5 +1,9 @@
 import {Category, Criteria} from "@samply/lens-core";
 
+/**
+ * Describes the search tree for Beacon.
+ */
+
 export const staticCatalogue: Array<Category> = [
   new Category(
     "MolecularMarker1",
