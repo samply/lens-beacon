@@ -27,6 +27,8 @@ You can use the supplied [docker-compose](./docker-compose.yml) file to test out
 docker-compose up -d 
 ```
 
+This will start the GUI and will additionally start the lens_beacon_service backend.
+
 Point your browser at [localhost](http://localhost) in order to see the GUI. If you hit the "Search" button
 without entering any search criteria, then the EGA Cineca site will be asked to provide summary information
 on all of its patients, samples and genomic variants. You will see these displayed as tables, pie charts and
