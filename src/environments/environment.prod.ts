@@ -9,6 +9,7 @@ import {geneticsMeasure} from "../app/model/lens-config";
 export const environment = {
   production: true,
   lensConfig: new LensConfig(
+    // TODO: the URL should come from a parameter
     [new Beacon('beacon', new URL('http://localhost:8080'))],
     [
       patientsMeasure,

@@ -35,7 +35,7 @@ export class Beacon implements RequestTarget {
   }
 
   /**
-   * Send the AST query to the Lens-Beacon service (https://github.com/samply/lens_beacon_service).
+   * Send the AST query to the Lens-Beacon service (https://github.com/samply/lens-beacon-service).
    *
    * The service will add one measure report per Beacon provider, plus the relevant Beacon provider names
    * (which are used for labelling in the Lens GUI) to this.resultsSubject.

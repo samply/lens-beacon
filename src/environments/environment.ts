@@ -17,6 +17,7 @@ import {Beacon} from '../app/services/beacon';
 export const environment = {
   production: false,
   lensConfig: new LensConfig(
+    // TODO: the URL should come from a parameter
     [new Beacon('beacon', new URL('http://localhost:8080'))],
     [
       patientsMeasure,

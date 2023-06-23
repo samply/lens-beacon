@@ -15,7 +15,7 @@ In this project, the Lens toolkit has been used to build a GUI that allow resear
 sites presenting the Beacon 2 API.
 
 This GUI does not talk directly to Beacon sites. An intermediate backend system, called
-[lens_beacon_service](https://github.com/samply/lens_beacon_service), is responsible for communication
+[lens-beacon-service](https://github.com/samply/lens-beacon-service), is responsible for communication
 with Beacon.
 
 ## Trying it out
@@ -27,7 +27,7 @@ You can use the supplied [docker-compose](./docker-compose.yml) file to test out
 docker-compose up -d 
 ```
 
-This will start the GUI and will additionally start the lens_beacon_service backend.
+This will start the GUI and will additionally start the lens-beacon-service backend.
 
 Point your browser at [localhost](http://localhost) in order to see the GUI. If you hit the "Search" button
 without entering any search criteria, then the EGA Cineca site will be asked to provide summary information
@@ -86,10 +86,10 @@ Finally, a histogram of samples categorized by sample type is shown
 The GUI is implemented as a lightweight component, there is no significant processing going on within it beyond what is
 needed for rendering.
 
-Most of the hard work is done in a backend component, the [lens_beacon_service](https://github.com/samply/lens_beacon_service).
+Most of the hard work is done in a backend component, the [lens-beacon-service](https://github.com/samply/lens-beacon-service).
 
 In the GUI, the user settings in the search tree (e.g. the search for Sex="female") are translated into a nested hierarchical graph,
-called an AST. This is serialized into a JSON string and sent to the lens_beacon_service backend.
+called an AST. This is serialized into a JSON string and sent to the lens-beacon-service backend.
 
 The backend converts the searches specified in the AST into relevant Beacon filters and runs queries against the
 three Beacon endpoints mentioned above.
@@ -119,10 +119,10 @@ Changes to the page layout at the top-level can be carried out in the HTML files
 
 Changes to the search tree need to be done in the relevant Typescript file: [catalogue.ts](src%2Fassets%2Fcatalogue.ts).
 If you only need to delete existing search attributes or categories, then editing this file is sufficient. If you wish
-to modify existing attributes or add new attributes, you will also need to make changes to the lens_beacon_service
+to modify existing attributes or add new attributes, you will also need to make changes to the lens-beacon-service
 backend component.
 
 The results tiles are configured in [main.component.ts](src%2Fapp%2Fmain%2Fmain.component.ts) (scroll down
 to the bottom of this file). If you only want to delete results tiles from the GUI, then editing this
 file is sufficient. If you want to make changes to data types or add completely new results tiles, then
-you will also need to change lens_beacon_service.
+you will also need to change lens-beacon-service.
