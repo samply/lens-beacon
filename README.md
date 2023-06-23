@@ -103,8 +103,8 @@ The GUI takes the measure reports and uses the information they contain to popul
 
 ## Customization
 
-Two graphics are used in constructing the GUI, [cropped-EJP-RD-txt-horizontal.png](src%2Fassets%2Fcropped-EJP-RD-txt-horizontal.png)
-(the logo used at the top left hand side) and [cropped-index-32x32.png](src%2Fassets%2Fcropped-index-32x32.png)
+Two graphics are used in constructing the GUI, [Beacon.PNG](src%2Fassets%2FBeacon.PNG)
+(the logo used at the top left hand side) and [Beacon-32x32.png](src%2Fassets%2FBeacon-32x32.png)
 (the favicon shown in the browser tab). You can exchange these for your own images. They are used in
 [app.component.html](src%2Fapp%2Fapp.component.html) and [index.html](src%2Findex.html) respectively.
 
