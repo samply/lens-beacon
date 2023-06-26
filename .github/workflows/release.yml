@@ -21,10 +21,3 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
-      - name: Sync Develop
-        run: |
-          git checkout main;
-          git checkout --track origin/develop;
-          git merge --ff-only main;
-          git push;
