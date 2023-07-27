@@ -13,7 +13,7 @@ import {
 })
 export class AppComponent {
   constructor(public title: Title) {
-    title.setTitle('Samply.Lens Beacon');
+    title.setTitle('GDI Beacon');
   }
 
   public primaryButtonColors: primaryButtonColors = {
