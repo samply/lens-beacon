@@ -18,21 +18,7 @@ import { BeaconResultTableComponent } from '../components/beacon-result-table/be
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent {
-  private siteHeaders: Map<string, string> = new Map<string, string>()
-    .set('berlin', 'Berlin')
-    .set('bonn', 'Bonn')
-    .set('dresden', 'Dresden')
-    .set('essen', 'Essen')
-    .set('frankfurt', 'Frankfurt')
-    .set('freiburg', 'Freiburg')
-    .set('hannover', 'Hannover')
-    .set('mainz', 'Mainz')
-    .set('mannheim', 'Mannheim')
-    .set('muenchen-lmu', 'München(LMU)')
-    .set('muenchen-tum', 'München(TUM)')
-    .set('ulm', 'Ulm')
-    .set('wuerzburg', 'Würzburg')
-    .set('dktk-test', 'DKTK-Test');
+  private siteHeaders: Map<string, string> = new Map<string, string>();
 
   private genderHeaders: Map<string, string> = new Map<string, string>()
     .set('male', 'männlich')
@@ -40,32 +26,15 @@ export class MainComponent {
     .set('other', 'sonstiges / intersexuell')
     .set('unknown', 'unbekannt');
 
-  private summaryBarHeaders: Map<string, string> = new Map<string, string>()
-    .set('sites', 'Standorte')
-    .set('patients', 'Patienten')
-    .set('specimen', 'Proben')
-    .set('diagnosis', 'Diagnosen');
-
-  public summaryBar = new ResultRenderer(
-    'Ergebnisse',
-    [{ key: 'sites' }, { key: 'patients' }],
-    ResultSummaryBarComponent,
-    {
-      headers: this.summaryBarHeaders,
-      clickDisabled: true,
-      showNegotiationButton: true,
-    }
-  );
-
   public diagrams: ResultRenderer[] = [
     new ResultRenderer(
-      'Overview',
+      '',
       [{ key: 'patients', subset: 'sites' }],
       BeaconResultTableComponent,
       {
         headers: this.siteHeaders,
         clickDisabled: true,
-        displayProperties: ['wide-diagram'],
+        displayProperties: ['extra-wide-diagram'],
       }
     ),
     new ResultRenderer(

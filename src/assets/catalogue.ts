@@ -7,20 +7,11 @@ import {Category, Criteria} from "@samply/lens-core";
 export const staticCatalogue: Array<Category> = [
   new Category(
     "MolecularMarker1",
-    "Genetics",
+    "Genetic variants",
     [
       new Criteria(
         "genomic_variation",
-        // {de: "DNAänderung, z.B. 22:g.16050075A>G", en: "DNA modification, e.g. 22:g.16050075A>G"},
         {de: "DNA modification, e.g. 22:g.16050075A>G", en: "DNA modification, e.g. 22:g.16050075A>G"},
-        "string",
-        "",
-        ["EQUALS"],
-      ),
-      new Criteria(
-        "ensembl_id",
-        // {de: "EnsemblID, z.B. ENSG00000125968", en: "EnsemblID, e.g. ENSG00000125968"},
-        {de: "EnsemblID, e.g. ENSG00000125968", en: "EnsemblID, e.g. ENSG00000125968"},
         "string",
         "",
         ["EQUALS"],
@@ -28,11 +19,10 @@ export const staticCatalogue: Array<Category> = [
   ),
   new Category(
       "general_data",
-      "Clinical data",
+      "Individuals",
       [
         new Criteria(
           "gender",
-          // {en: "Sex", de: "Geschlecht"},
           {en: "Sex", de: "Sex"},
           "string",
           "",
@@ -41,32 +31,17 @@ export const staticCatalogue: Array<Category> = [
             {
               "key": "male",
               "en": "male",
-              // "de": "männlich"
               "de": "male"
             },
             {
               "key": "female",
               "en": "female",
-              // "de": "weiblich"
               "de": "female"
-            },
-            {
-              "key": "other",
-              "en": "diverse",
-              // "de": "Sonstiges / intersexuell"
-              "de": "diverse"
-            },
-            {
-              "key": "unknown",
-              "en": "unknown",
-              // "de": "unbekannt"
-              "de": "unknown"
             }
           ]
         ),
         new Criteria(
           "ethnicity",
-          // {en: "Sex", de: "Geschlecht"},
           {en: "Ethnicity", de: "Ethnicity"},
           "string",
           "",
@@ -173,16 +148,60 @@ export const staticCatalogue: Array<Category> = [
               "de": "Chinese"
             }
           ]
+        ),
+        new Criteria(
+          "disease",
+          {en: "Disease", de: "Disease"},
+          "string",
+          "",
+          ["IN"],
+          [
+            {
+              "key": "iron deficiency anaemia",
+              "en": "iron deficiency anaemia",
+              "de": "iron deficiency anaemia"
+            },
+            {
+              "key": "asthma",
+              "en": "asthma",
+              "de": "asthma"
+            }
+          ]
+        ),
+        new Criteria(
+          "geographicOrigin",
+          {en: "Geographic origin", de: "Geographic origin"},
+          "string",
+          "",
+          ["IN"],
+          [
+            {
+              "key": "Wales",
+              "en": "Wales",
+              "de": "Wales"
+            },
+            {
+              "key": "England",
+              "en": "England",
+              "de": "England"
+            }
+          ]
+        ),
+        new Criteria(
+          "procedureCode",
+          {de: "OPCS4 procedure code, e.g. X53.3", en: "OPCS4 procedure code, e.g. X53.3"},
+          "string",
+          "",
+          ["EQUALS"],
         )
       ]
     ),
     new Category(
       "biosamples",
-      "Biosample",
+      "Biosamples",
       [
         new Criteria(
           "sample_kind",
-          // {de: "Probenart", en: "Sample kind"},
           {de: "Sample type", en: "Sample type"},
           "string",
           "",
@@ -190,7 +209,6 @@ export const staticCatalogue: Array<Category> = [
           [
             {
               "key": "blood",
-              // "de": "Vollblut",
               "de": "Whole blood",
               "en": "Whole blood"
             },
