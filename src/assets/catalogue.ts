@@ -176,6 +176,21 @@ export const staticCatalogue: Array<Category> = [
           ["IN"],
           [
             {
+              "key": "Northern Ireland",
+              "en": "Northern Ireland",
+              "de": "Northern Ireland"
+            },
+            {
+              "key": "Republic of Ireland",
+              "en": "Republic of Ireland",
+              "de": "Republic of Ireland"
+            },
+            {
+              "key": "Wales",
+              "en": "Wales",
+              "de": "Wales"
+            },
+            {
               "key": "Wales",
               "en": "Wales",
               "de": "Wales"
