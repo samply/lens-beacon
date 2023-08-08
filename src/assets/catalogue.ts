@@ -157,14 +157,99 @@ export const staticCatalogue: Array<Category> = [
           ["IN"],
           [
             {
-              "key": "iron deficiency anaemia",
-              "en": "iron deficiency anaemia",
-              "de": "iron deficiency anaemia"
+              "key": "acute bronchitis",
+              "en": "acute bronchitis",
+              "de": "acute bronchitis"
+            },
+            {
+              "key": "agranulocytosis",
+              "en": "agranulocytosis",
+              "de": "agranulocytosis"
             },
             {
               "key": "asthma",
               "en": "asthma",
               "de": "asthma"
+            },
+            {
+              "key": "bipolar affective disorder",
+              "en": "bipolar affective disorder",
+              "de": "bipolar affective disorder"
+            },
+            {
+              "key": "cardiomyopathy",
+              "en": "cardiomyopathy",
+              "de": "cardiomyopathy"
+            },
+            {
+              "key": "dental caries",
+              "en": "dental caries",
+              "de": "dental caries"
+            },
+            {
+              "key": "eating disorders",
+              "en": "eating disorders",
+              "de": "eating disorders"
+            },
+            {
+              "key": "fibrosis and cirrhosis of liver",
+              "en": "fibrosis and cirrhosis of liver",
+              "de": "fibrosis and cirrhosis of liver"
+            },
+            {
+              "key": "gastro-oesophageal reflux disease",
+              "en": "gastro-oesophageal reflux disease",
+              "de": "gastro-oesophageal reflux disease"
+            },
+            {
+              "key": "haemorrhoids",
+              "en": "haemorrhoids",
+              "de": "haemorrhoids"
+            },
+            {
+              "key": "influenza due to certain identified influenza virus",
+              "en": "influenza due to certain identified influenza virus",
+              "de": "influenza due to certain identified influenza virus"
+            },
+            {
+              "key": "insulin-dependent diabetes mellitus",
+              "en": "insulin-dependent diabetes mellitus",
+              "de": "insulin-dependent diabetes mellitus"
+            },
+            {
+              "key": "iron deficiency anaemia",
+              "en": "iron deficiency anaemia",
+              "de": "iron deficiency anaemia"
+            },
+            {
+              "key": "multiple sclerosis",
+              "en": "multiple sclerosis",
+              "de": "multiple sclerosis"
+            },
+            {
+              "key": "obesity",
+              "en": "obesity",
+              "de": "obesity"
+            },
+            {
+              "key": "sarcoidosis",
+              "en": "sarcoidosis",
+              "de": "sarcoidosis"
+            },
+            {
+              "key": "schizophrenia",
+              "en": "schizophrenia",
+              "de": "schizophrenia"
+            },
+            {
+              "key": "thyroiditis",
+              "en": "thyroiditis",
+              "de": "thyroiditis"
+            },
+            {
+              "key": "varicose veins of lower extremities",
+              "en": "varicose veins of lower extremities",
+              "de": "varicose veins of lower extremities"
             }
           ]
         ),
