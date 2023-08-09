@@ -15,7 +15,165 @@ export const staticCatalogue: Array<Category> = [
         "string",
         "",
         ["EQUALS"],
-      ),]
+      ),
+      new Criteria(
+        "variant_type",
+        {en: "Variant Type", de: "Variant Type"},
+        "string",
+        "",
+        ["IN"],
+        [
+          {
+            "key": "Variant",
+            "en": "Variant",
+            "de": "Variant"
+          },
+          {
+            "key": "Sequence variant",
+            "en": "Sequence variant",
+            "de": "Sequence variant"
+          },
+          {
+            "key": "Structural variant",
+            "en": "Structural variant",
+            "de": "Structural variant"
+          },
+          {
+            "key": "Allele",
+            "en": "Allele",
+            "de": "Allele"
+          },
+          {
+            "key": "Short tandem repeat variant",
+            "en": "Short tandem repeat variant",
+            "de": "Short tandem repeat variant"
+          },
+          {
+            "key": "Splice acceptor variant",
+            "en": "Splice acceptor variant",
+            "de": "Splice acceptor variant"
+          },
+          {
+            "key": "Splice donor variant",
+            "en": "Splice donor variant",
+            "de": "Splice donor variant"
+          },
+          {
+            "key": "Frameshift variant",
+            "en": "Frameshift variant",
+            "de": "Frameshift variant"
+          },
+          {
+            "key": "Missense variant",
+            "en": "Missense variant",
+            "de": "Missense variant"
+          },
+          {
+            "key": "Protein altering variant",
+            "en": "Protein altering variant",
+            "de": "Protein altering variant"
+          },
+          {
+            "key": "Splice region variant",
+            "en": "Splice region variant",
+            "de": "Splice region variant"
+          },
+          {
+            "key": "Incomplete terminal codon variant",
+            "en": "Incomplete terminal codon variant",
+            "de": "Incomplete terminal codon variant"
+          },
+          {
+            "key": "Intergenic variant",
+            "en": "Intergenic variant",
+            "de": "Intergenic variant"
+          },
+          {
+            "key": "Stop retained variant",
+            "en": "Stop retained variant",
+            "de": "Stop retained variant"
+          },
+          {
+            "key": "Synonymous variant",
+            "en": "Synonymous variant",
+            "de": "Synonymous variant"
+          },
+          {
+            "key": "Flagged variant",
+            "en": "Flagged variant",
+            "de": "Flagged variant"
+          }        ]
+      ),
+      new Criteria(
+        "zygosity",
+        {en: "Zygosity", de: "Zygosity"},
+        "string",
+        "",
+        ["IN"],
+        [
+          {
+            "key": "Hemizygous",
+            "en": "Hemizygous",
+            "de": "Hemizygous"
+          },
+          {
+            "key": "Heterozygous",
+            "en": "Heterozygous",
+            "de": "Heterozygous"
+          },
+          {
+            "key": "Homozygous",
+            "en": "Homozygous",
+            "de": "Homozygous"
+          },
+          {
+            "key": "Hemizygous X-linked",
+            "en": "Hemizygous X-linked",
+            "de": "Hemizygous X-linked"
+          },
+          {
+            "key": "Hemizygous Y-linked",
+            "en": "Hemizygous Y-linked",
+            "de": "Hemizygous Y-linked"
+          },
+          {
+            "key": "Hemizygous insertion-linked",
+            "en": "Hemizygous insertion-linked",
+            "de": "Hemizygous insertion-linked"
+          },
+          {
+            "key": "Simple heterozygous",
+            "en": "Simple heterozygous",
+            "de": "Simple heterozygous"
+          },
+          {
+            "key": "Disomic zygosity",
+            "en": "Disomic zygosity",
+            "de": "Disomic zygosity"
+          },
+          {
+            "key": "Aneusomic zygosity",
+            "en": "Aneusomic zygosity",
+            "de": "Aneusomic zygosity"
+          },
+          {
+            "key": "Trisomic homozygous",
+            "en": "Trisomic homozygous",
+            "de": "Trisomic homozygous"
+          },
+          {
+            "key": "Trisomic heterozygous",
+            "en": "Trisomic heterozygous",
+            "de": "Trisomic heterozygous"
+          },
+          {
+            "key": "Compound heterozygous",
+            "en": "Compound heterozygous",
+            "de": "Compound heterozygous"
+          }
+        ]
+      )
+    ]
   ),
   new Category(
       "general_data",
