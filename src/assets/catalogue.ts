@@ -7,7 +7,7 @@ import {Category, Criteria} from "@samply/lens-core";
 export const staticCatalogue: Array<Category> = [
   new Category(
     "MolecularMarker1",
-    "Genetic variants",
+    "Variants",
     [
       new Criteria(
         "genomic_variation",
@@ -170,6 +170,65 @@ export const staticCatalogue: Array<Category> = [
             "key": "Compound heterozygous",
             "en": "Compound heterozygous",
             "de": "Compound heterozygous"
+          }
+        ]
+      )
+    ]
+  ),
+  new Category(
+    "cohorts",
+    "Cohorts",
+    [
+      new Criteria(
+        "cohorts_gender",
+        {en: "Sex", de: "Sex"},
+        "string",
+        "",
+        ["IN"],
+        [
+          {
+            "key": "male",
+            "en": "male",
+            "de": "male"
+          },
+          {
+            "key": "female",
+            "en": "female",
+            "de": "female"
+          }
+        ]
+      ),
+      new Criteria(
+        "cohorts_geographicOrigin",
+        {en: "Geographic origin", de: "Geographic origin"},
+        "string",
+        "",
+        ["IN"],
+        [
+          {
+            "key": "Northern Ireland",
+            "en": "Northern Ireland",
+            "de": "Northern Ireland"
+          },
+          {
+            "key": "Republic of Ireland",
+            "en": "Republic of Ireland",
+            "de": "Republic of Ireland"
+          },
+          {
+            "key": "Wales",
+            "en": "Wales",
+            "de": "Wales"
+          },
+          {
+            "key": "Wales",
+            "en": "Wales",
+            "de": "Wales"
+          },
+          {
+            "key": "England",
+            "en": "England",
+            "de": "England"
           }
         ]
       )
@@ -484,6 +543,25 @@ export const staticCatalogue: Array<Category> = [
               "key": "lymph",
               "de": "Lymph",
               "en": "Lymph"
+            }
+          ]
+        ),
+        new Criteria(
+          "biosample_status",
+          {de: "Biosample status", en: "Biosample status"},
+          "string",
+          "",
+          ["IN"],
+          [
+            {
+              "key": "Reference sample",
+              "de": "Reference sample",
+              "en": "Reference sample"
+            },
+            {
+              "key": "Abnormal sample",
+              "de": "Abnormal sample",
+              "en": "Abnormal sample"
             }
           ]
         )
