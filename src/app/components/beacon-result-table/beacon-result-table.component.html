@@ -11,6 +11,7 @@
               <th i18n="column header for the name of a site">Sites</th>
               <th i18n="column header for the number of variants">Variants</th>
               <th i18n="column header for the number of cohorts">Cohorts</th>
+              <th i18n="column header for the number of runs">Runs</th>
               <th i18n="column header for the number of patients">Individuals</th>
               <th i18n="column header for the number of specimen">Biosamples</th>
             </tr>
@@ -24,6 +25,8 @@
               <td *ngIf="result.genetics >= 0">{{result.genetics}}</td>
               <td *ngIf="result.cohorts < 0">-</td>
               <td *ngIf="result.cohorts >= 0">{{result.cohorts}}</td>
+              <td *ngIf="result.runs < 0">-</td>
+              <td *ngIf="result.runs >= 0">{{result.runs}}</td>
               <td *ngIf="result.patients < 0">-</td>
               <td *ngIf="result.patients >= 0">{{result.patients}}</td>
               <td *ngIf="result.samples < 0">-</td>

@@ -235,6 +235,60 @@ export const staticCatalogue: Array<Category> = [
     ]
   ),
   new Category(
+    "runs",
+    "Runs",
+    [
+      new Criteria(
+        "genomic_source",
+        {en: "Genomic source", de: "Genomic source"},
+        "string",
+        "",
+        ["IN"],
+        [
+          {
+            "key": "Genomic Source",
+            "en": "Genomic Source",
+            "de": "Genomic Source"
+          },
+          {
+            "key": "Metagenomic Source",
+            "en": "Metagenomic Source",
+            "de": "Metagenomic Source"
+          }
+        ]
+      ),
+      new Criteria(
+        "platform_model",
+        {en: "Platform model", de: "Platform model"},
+        "string",
+        "",
+        ["IN"],
+        [
+          {
+            "key": "DNA sequencer",
+            "en": "DNA sequencer",
+            "de": "DNA sequencer"
+          },
+          {
+            "key": "Illumina HiSeq 2000",
+            "en": "Illumina HiSeq 2000",
+            "de": "Illumina HiSeq 2000"
+          },
+          {
+            "key": "Oxford Nanopore MinION",
+            "en": "Oxford Nanopore MinION",
+            "de": "Oxford Nanopore MinION"
+          },
+          {
+            "key": "Large-insert clone DNA microarray",
+            "en": "Large-insert clone DNA microarray",
+            "de": "Large-insert clone DNA microarray"
+          }
+        ]
+      )
+    ]
+  ),
+  new Category(
       "general_data",
       "Individuals",
       [
