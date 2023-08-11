@@ -324,6 +324,12 @@ export const staticCatalogue: Array<Category> = [
     ]
   ),
   new Category(
+    "analyses",
+    "Analyses",
+    [
+    ]
+  ),
+  new Category(
       "general_data",
       "Individuals",
       [

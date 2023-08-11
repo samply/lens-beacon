@@ -13,6 +13,7 @@
               <th i18n="column header for the number of cohorts">Cohorts</th>
               <th i18n="column header for the number of runs">Runs</th>
               <th i18n="column header for the number of datasets">Datasets</th>
+              <th i18n="column header for the number of analyses">Analyses</th>
               <th i18n="column header for the number of patients">Individuals</th>
               <th i18n="column header for the number of specimen">Biosamples</th>
             </tr>
@@ -30,7 +31,9 @@
               <td *ngIf="result.runs >= 0">{{result.runs}}</td>
               <td *ngIf="result.datasets < 0">-</td>
               <td *ngIf="result.datasets >= 0">{{result.datasets}}</td>
-              <td *ngIf="result.patients < 0">-</td>
+              <td *ngIf="result.datasets < 0">-</td>
+              <td *ngIf="result.analyses >= 0">{{result.analyses}}</td>
+              <td *ngIf="result.analyses < 0">-</td>
               <td *ngIf="result.patients >= 0">{{result.patients}}</td>
               <td *ngIf="result.samples < 0">-</td>
               <td *ngIf="result.samples >= 0">{{result.samples}}</td>

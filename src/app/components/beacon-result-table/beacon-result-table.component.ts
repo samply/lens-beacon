@@ -33,6 +33,7 @@ export class BeaconResultTableComponent extends ResultRendererComponent {
           let cohortsStratum = site.stratum.find(strat => strat.key == "cohorts")
           let runsStratum = site.stratum.find(strat => strat.key == "runs")
           let datasetsStratum = site.stratum.find(strat => strat.key == "datasets")
+          let analysesStratum = site.stratum.find(strat => strat.key == "analyses")
           let patientStratum = site.stratum.find(strat => strat.key == "patients")
           let specimenStratum = site.stratum.find(strat => strat.key == "specimen")
           return {
@@ -41,6 +42,7 @@ export class BeaconResultTableComponent extends ResultRendererComponent {
             cohorts: (cohortsStratum != undefined) ? cohortsStratum.population : 0,
             runs: (runsStratum != undefined) ? runsStratum.population : 0,
             datasets: (datasetsStratum != undefined) ? datasetsStratum.population : 0,
+            analyses: (analysesStratum != undefined) ? analysesStratum.population : 0,
             patients: (patientStratum != undefined) ? patientStratum.population : 0,
             samples: (specimenStratum != undefined) ? specimenStratum.population : 0,
             diagnosis: 0,
