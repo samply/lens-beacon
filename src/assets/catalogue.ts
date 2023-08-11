@@ -289,6 +289,41 @@ export const staticCatalogue: Array<Category> = [
     ]
   ),
   new Category(
+    "datasets",
+    "Datasets",
+    [
+      new Criteria(
+        "data_use",
+        {en: "Data use", de: "Data use"},
+        "string",
+        "",
+        ["IN"],
+        [
+          {
+            "key": "Publication required",
+            "en": "Publication required",
+            "de": "Publication required"
+          },
+          {
+            "key": "General research use",
+            "en": "General research use",
+            "de": "General research use"
+          },
+          {
+            "key": "User specific restriction",
+            "en": "User specific restriction",
+            "de": "User specific restriction"
+          },
+          {
+            "key": "Institution specific",
+            "en": "Institution specific",
+            "de": "Institution specific"
+          }
+        ]
+      )
+    ]
+  ),
+  new Category(
       "general_data",
       "Individuals",
       [
