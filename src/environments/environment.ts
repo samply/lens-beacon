@@ -17,13 +17,9 @@ import {Beacon} from '../app/services/beacon';
 export const environment = {
   production: false,
   lensConfig: new LensConfig(
-    // TODO: the URL should come from a parameter
-    [new Beacon('beacon', new URL('http://localhost:8080'))],
-    [
-      patientsMeasure,
-      specimenMeasure,
-      geneticsMeasure // Measure report for variants and other genetic information
-    ]
+    // The lens-beacon-service URL is assumed to be the same as the one hosting lens.
+    [new Beacon('beacon', new URL(window.location.origin + ':8080'))],
+    []
   ),
 };
 
