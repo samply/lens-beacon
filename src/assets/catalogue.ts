@@ -601,10 +601,31 @@ export const staticCatalogue: Array<Category> = [
         ),
         new Criteria(
           "procedureCode",
-          {de: "OPCS4 procedure code, e.g. X53.3", en: "OPCS4 procedure code, e.g. X53.3"},
+          {de: "OPCS4 procedure code, e.g. X53", en: "OPCS4 procedure code, e.g. X53"},
           "string",
           "",
           ["EQUALS"],
+        ),
+        new Criteria(
+          "bmi",
+          { de: "BMI", en: "BMI" },
+          "number",
+          "",
+          ["LOWER_THAN", "GREATER_THAN"]
+        ),
+        new Criteria(
+          "weight",
+          { de: "Weight", en: "Weight" },
+          "number",
+          "",
+          ["LOWER_THAN", "GREATER_THAN"]
+        ),
+        new Criteria(
+          "height",
+          { de: "Height", en: "Height" },
+          "number",
+          "",
+          ["LOWER_THAN", "GREATER_THAN"]
         )
       ]
     ),
