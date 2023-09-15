@@ -6,12 +6,173 @@ import {Category, Criteria} from "@samply/lens-core";
 
 export const staticCatalogue: Array<Category> = [
   new Category(
-    "MolecularMarker1",
+    "variants",
     "Variants",
     [
-      new Criteria(
+      new Category(
         "genomic_variation",
-        {de: "DNA modification, e.g. 22:g.16050075A>G", en: "DNA modification, e.g. 22:g.16050075A>G"},
+        "Genomic variation",
+        [
+          new Criteria(
+            "chromosome",
+            {de: "Chromosome", en: "Chromosome"},
+            "string",
+            "",
+            ["IN"],
+            [
+              {
+                "key": "1",
+                "de": "1",
+                "en": "1"
+              },
+              {
+                "key": "2",
+                "de": "2",
+                "en": "2"
+              },
+              {
+                "key": "3",
+                "de": "3",
+                "en": "3"
+              },
+              {
+                "key": "4",
+                "de": "4",
+                "en": "4"
+              },
+              {
+                "key": "5",
+                "de": "5",
+                "en": "5"
+              },
+              {
+                "key": "6",
+                "de": "6",
+                "en": "6"
+              },
+              {
+                "key": "7",
+                "de": "7",
+                "en": "7"
+              },
+              {
+                "key": "8",
+                "de": "8",
+                "en": "8"
+              },
+              {
+                "key": "9",
+                "de": "9",
+                "en": "9"
+              },
+              {
+                "key": "10",
+                "de": "10",
+                "en": "10"
+              },
+              {
+                "key": "11",
+                "de": "11",
+                "en": "11"
+              },
+              {
+                "key": "12",
+                "de": "12",
+                "en": "12"
+              },
+              {
+                "key": "13",
+                "de": "13",
+                "en": "13"
+              },
+              {
+                "key": "14",
+                "de": "14",
+                "en": "14"
+              },
+              {
+                "key": "15",
+                "de": "15",
+                "en": "15"
+              },
+              {
+                "key": "16",
+                "de": "16",
+                "en": "16"
+              },
+              {
+                "key": "17",
+                "de": "17",
+                "en": "17"
+              },
+              {
+                "key": "18",
+                "de": "18",
+                "en": "18"
+              },
+              {
+                "key": "19",
+                "de": "19",
+                "en": "19"
+              },
+              {
+                "key": "20",
+                "de": "20",
+                "en": "20"
+              },
+              {
+                "key": "21",
+                "de": "21",
+                "en": "21"
+              },
+              {
+                "key": "22",
+                "de": "22",
+                "en": "22"
+              }
+            ]
+          ),
+          new Criteria(
+            "base_change",
+            {de: "Base transition", en: "Base transition"},
+            "string",
+            "",
+            ["IN"],
+            [
+              {
+                "key": "A>G",
+                "de": "A>G",
+                "en": "A>G"
+              },
+              {
+                "key": "G>A",
+                "de": "G>A",
+                "en": "G>A"
+              },
+              {
+                "key": "C>T",
+                "de": "C>T",
+                "en": "C>T"
+              },
+              {
+                "key": "T>C",
+                "de": "T>C",
+                "en": "T>C"
+              }
+            ]
+          ),
+          new Criteria(
+            "range",
+            { de: "Range", en: "Range" },
+            "number",
+            "",
+            ["BETWEEN"]
+          ),
+        ]
+      ),
+      new Criteria(
+        "hgvs",
+        {de: "HGVS, e.g. 22:g.16050075A>G", en: "HGVS, e.g. 22:g.16050075A>G"},
         "string",
         "",
         ["EQUALS"],
@@ -221,9 +382,9 @@ export const staticCatalogue: Array<Category> = [
             "de": "Wales"
           },
           {
-            "key": "Wales",
-            "en": "Wales",
-            "de": "Wales"
+            "key": "Scotland",
+            "en": "Scotland",
+            "de": "Scotland"
           },
           {
             "key": "England",
@@ -330,7 +491,7 @@ export const staticCatalogue: Array<Category> = [
     ]
   ),
   new Category(
-      "general_data",
+      "individuals",
       "Individuals",
       [
         new Criteria(
@@ -588,9 +749,9 @@ export const staticCatalogue: Array<Category> = [
               "de": "Wales"
             },
             {
-              "key": "Wales",
-              "en": "Wales",
-              "de": "Wales"
+              "key": "Scotland",
+              "en": "Scotland",
+              "de": "Scotland"
             },
             {
               "key": "England",

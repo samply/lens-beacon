@@ -23,8 +23,8 @@
               <td *ngIf="resultRenderer.headers.size == 0">{{result.site}}</td>
               <td *ngIf="resultRenderer.headers.size > 0">{{(resultRenderer.headers.has(result.site)) ? resultRenderer.headers.get(result.site) : result.site}}</td>
               <!-- A negative value means "unknown". Display a "-" in this case. -->
-              <td *ngIf="result.genetics < 0">-</td>
-              <td *ngIf="result.genetics >= 0">{{result.genetics}}</td>
+              <td *ngIf="result.variants < 0">-</td>
+              <td *ngIf="result.variants >= 0">{{result.variants}}</td>
               <td *ngIf="result.cohorts < 0">-</td>
               <td *ngIf="result.cohorts >= 0">{{result.cohorts}}</td>
               <td *ngIf="result.runs < 0">-</td>
@@ -33,8 +33,8 @@
               <td *ngIf="result.datasets >= 0">{{result.datasets}}</td>
               <td *ngIf="result.analyses < 0">-</td>
               <td *ngIf="result.analyses >= 0">{{result.analyses}}</td>
-              <td *ngIf="result.patients < 0">-</td>
-              <td *ngIf="result.patients >= 0">{{result.patients}}</td>
+              <td *ngIf="result.individuals < 0">-</td>
+              <td *ngIf="result.individuals >= 0">{{result.individuals}}</td>
               <td *ngIf="result.samples < 0">-</td>
               <td *ngIf="result.samples >= 0">{{result.samples}}</td>
             </tr>
